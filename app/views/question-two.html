@@ -16,21 +16,59 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        Heading or question goes here
+      <h1 class="govuk-heading-m">
+        Question 2
       </h1>
 
       <form class="form" action="/path/of/next/page" method="post">
 
-        <p>
-          [Insert question content here - see the
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-          for examples]
-        </p>
-
-        {{ govukButton({
-          text: "Continue"
+        {{ govukCheckboxes({
+          name: "countries",
+          fieldset: {
+            legend: {
+              text: "Which of the following are important considerations for ensuring web accessibility?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "(Select all that apply)"
+          },
+          items: [
+            {
+              value: "1",
+              text: "Providing alternative text for images"
+            },
+            {
+              value: "2",
+              text: "Using complex color schemes for visual appeal"
+            },
+            {
+              value: "3",
+              text: "Ensuring keyboard accessibility"
+            },
+            {
+              value: "4",
+              text: "Exclusively relying on audio content"
+            },
+            {
+              value: "5",
+              text: "Implementing responsive design for mobile devices"
+            },
+            {
+              divider: "or"
+            },
+            {
+              value: "none",
+              text: "None of the above",
+              behaviour: "exclusive"
+            }
+          ]
         }) }}
+
+        {{
+          govukButton({ text: "Continue", href: "/question-three" }) 
+        }}
 
       </form>
 
