@@ -1,34 +1,42 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/main.html" %} {% block pageTitle %} Content page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
 
-{% block pageTitle %}
-  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
-{% endblock %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">How to play</h1>
 
-{% block beforeContent %}
-  {{ govukBackLink({
-    text: "Back",
-    href: "javascript:window.history.back()"
-  }) }}
-{% endblock %}
+    <ol class="govuk-list govuk-list--number govuk-list--spaced">
+      <li>
+        Each participant must attempt the quiz individually. Collaboration or
+        seeking outside help is not allowed.
+      </li>
+      <li>
+        The quiz consists of multiple-choice questions. Read each question
+        carefully and select the most appropriate answer.
+      </li>
+      <li>
+        At the end of the quiz, your score will be displayed, indicating the
+        number of correct answers you provided.
+      </li>
+      <li>
+        Remember, the primary purpose of this quiz is to enhance your
+        understanding of WACG. Embrace the challenge, have fun, and celebrate
+        your achievements!
+      </li>
+    </ol>
 
-{% block content %}
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-      <h1 class="govuk-heading-l">
-        Heading goes here
-      </h1>
-
-      <p>
-        This is a paragraph of text. It explains in more detail what has happened and wraps across several lines.
-      </p>
-
-      <p>
-        Read more <a href="/path/of/page">about this topic</a>.
-      </p>
-
-    </div>
+    <p>
+      Read more about accessibility
+      <a
+        target="_blank"
+        href="https://www.digitala11y.com/web-accessibility-resources/"
+        >Here</a
+      >.
+    </p>
+    {{ govukButton({ text: "Continue", href: "/question-one"}) }}
   </div>
+</div>
 
 {% endblock %}

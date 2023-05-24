@@ -1,40 +1,23 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
+{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
+%} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}} {% endblock %} {% block content %}
 
-{% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
-{% endblock %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Question 1</h1>
 
-{% block beforeContent %}
-  {{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
-}) }}
-{% endblock %}
-
-{% block content %}
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-      <h1 class="govuk-heading-l">
-        Heading or question goes here
-      </h1>
-
-      <form class="form" action="/path/of/next/page" method="post">
-
-        <p>
-          [Insert question content here - see the
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-          for examples]
-        </p>
-
-        {{ govukButton({
-          text: "Continue"
-        }) }}
-
-      </form>
-
-    </div>
+    <form class="form" action="/path/of/next/page" method="post">
+      {{ govukRadios({ name: "wcag-key-principle", value: data['question-one'],
+      fieldset: { legend: { text: "Which of the following is a key principle of
+      Web Content Accessibility Guidelines (WCAG)?", isPageHeading: true,
+      classes: "govuk-fieldset__legend--l" } }, items: [ { value: "1", text:
+      "Visual Appeal Enhancement" }, { value: "2", text: "Device Compatibility
+      Optimization" }, { value: "3", text: "Perceptible Information" }, { value:
+      "4", text: "Search Engine Optimization (SEO) Techniques" } ] }) }} {{
+      govukButton({ text: "Continue", href: "/question-two" }) }}
+    </form>
   </div>
+</div>
 
 {% endblock %}
