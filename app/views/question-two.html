@@ -1,28 +1,69 @@
 {% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
 {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
-%} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
-}} {% endblock %} {% block content %}
+%}
+{{
+  govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}}
+{% endblock %} {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-m">Question 2</h1>
 
-    
     <form class="form" action="/question-three" method="post">
-      {{ govukCheckboxes({ name: "question-two", id: "question-two", value:
-      data['question-two'], fieldset: { legend: { text: "Which of the following
+      {{
+        govukCheckboxes({
+          name: "question-two",
+          id: "question-two",
+          value: data["question-two"],
+          fieldset: {
+            legend: {
+              text: "Which of the following
       are important considerations for ensuring web accessibility?",
-      isPageHeading: true, classes: "govuk-fieldset__legend--l" } }, hint: {
-      text: "Select all that apply" }, items: [ { value: "Providing alternative
-      text for images", text: "Providing alternative text for images" }, {
-      value: "Using complex color schemes for visual appeal", text: "Using
-      complex color schemes for visual appeal" }, { value: "Ensuring keyboard
-      accessibility", text: "Ensuring keyboard accessibility" }, { value:
-      "Exclusively relying on audio content", text: "Exclusively relying on
-      audio content" }, { value: "Implementing responsive design for mobile
-      devices", text: "Implementing responsive design for mobile devices" }, {
-      divider: "or" }, { value: "none", text: "None of the above", behaviour:
-      "exclusive" } ] }) }} {{ govukButton({ text: "Continue" }) }}
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "Select all that apply"
+          },
+          items: [
+            {
+              value:
+                "Providing alternative
+      text for images",
+              text: "Providing alternative text for images"
+            },
+            {
+              value: "Using complex color schemes for visual appeal",
+              text: "Using
+      complex color schemes for visual appeal"
+            },
+            {
+              value:
+                "Ensuring keyboard
+      accessibility",
+              text: "Ensuring keyboard accessibility"
+            },
+            {
+              value: "Exclusively relying on audio content",
+              text: "Exclusively relying on
+      audio content"
+            },
+            {
+              value:
+                "Implementing responsive design for mobile
+      devices",
+              text: "Implementing responsive design for mobile devices"
+            },
+            {
+              divider: "or"
+            },
+            { value: "none", text: "None of the above", behaviour: "exclusive" }
+          ]
+        })
+      }}
+      {{ govukButton({ text: "Continue" }) }}
     </form>
   </div>
 </div>

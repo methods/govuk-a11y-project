@@ -1,23 +1,52 @@
 {% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
 {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
-%} {{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
-}} {% endblock %} {% block content %}
+%}
+{{
+  govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
+}}
+{% endblock %} {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-m">Question 1</h1>
 
     <form class="form" action="/question-two" method="post">
-      {{ govukRadios({ name: "question-one", id: "question-one", fieldset: {
-      legend: { text: "Which of the following is a key principle of Web Content
-      Accessibility Guidelines (WCAG)?", isPageHeading: true, classes:
-      "govuk-fieldset__legend--l" }, value: data["question-one"] }, items: [ {
-      value: "Visual Appeal Enhancement", text: "Visual Appeal Enhancement" }, {
-      value: "Device Compatibility Optimization", text: "Device Compatibility
-      Optimization" }, { value: "Perceptible Information", text: "Perceptible
-      Information" }, { value: "Search Engine Optimization (SEO) Techniques",
-      text: "Search Engine Optimization (SEO) Techniques" } ] }) }} {{
-      govukButton({ text: "Continue"}) }}
+      {{
+        govukRadios({
+          name: "question-one",
+          id: "question-one",
+          fieldset: {
+            legend: {
+              text: "Which of the following is a key principle of Web Content
+      Accessibility Guidelines (WCAG)?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            },
+            value: data["question-one"]
+          },
+          items: [
+            {
+              value: "Visual Appeal Enhancement",
+              text: "Visual Appeal Enhancement"
+            },
+            {
+              value: "Device Compatibility Optimization",
+              text: "Device Compatibility
+      Optimization"
+            },
+            {
+              value: "Perceptible Information",
+              text: "Perceptible
+      Information"
+            },
+            {
+              value: "Search Engine Optimization (SEO) Techniques",
+              text: "Search Engine Optimization (SEO) Techniques"
+            }
+          ]
+        })
+      }}
+      {{ govukButton({ text: "Continue" }) }}
     </form>
   </div>
 </div>
