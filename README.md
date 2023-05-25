@@ -20,12 +20,14 @@ The goal of the 2 week prototype project is to:
 
 # Team AccessForce Presents
 
-<h3 align="center">WCAG</h3>
+<h3 align="center">
+    Web Content Accessibility Guidelines
+</h3>
 
 ---
 
 <p align="center"> 
-    
+    (Description goes Here)
     <br>
 
 </p>
@@ -58,8 +60,9 @@ The goal of the 2 week prototype project is to:
 
 ## 📃 Documentation <a name = "documentation"></a>
 
-- [Our Team Manifesto]()
-- [Code Style Guide]()
+- [Trello](https://trello.com/b/SMnDEoYm/accessibility#)
+- [Figma](https://www.figma.com/file/VeMv9nnjFmqWFcmqCGph5h/Gov-Prototype?type=design&node-id=0%3A1&t=ZapogPQYCARIDz8B-1)
+- [JamBoard](https://jamboard.google.com/d/1Nn_IjJ6DRoyo_7J3P9lSn4jcWulA2igEX8womG1qSIw/viewer?f=0)
 
 ## ✍️ Authors <a name = "authors"></a>
 
