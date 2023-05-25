@@ -17,16 +17,38 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        Heading or question goes here
+        Player information
       </h1>
 
-      <form class="form" action="/path/of/next/page" method="post">
+      <form class="form" action="/age-answer" method="post">
 
-        <p>
-          [Insert question content here - see the
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-          for examples]
-        </p>
+        {{ govukInput({
+        label: {
+        text: "Full Name",
+        classes: "govuk-label--m"
+        },
+        hint: {
+        text: "For example, Loren Thurman"
+        },
+        classes: "govuk-input--width-10",
+        id: "full-name",
+        name: "full-name",
+        value: data["full-name"]
+        }) }}
+
+        {{ govukInput({
+        label: {
+        text: "Age",
+        classes: "govuk-label--m"
+        },
+        hint: {
+        text: "For example, 21"
+        },
+        classes: "govuk-input--width-2",
+        id: "age",
+        name: "age",
+        value: data["age"]
+        }) }}
 
         {{ govukButton({
           text: "Continue"
