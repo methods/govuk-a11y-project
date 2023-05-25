@@ -20,10 +20,11 @@
         Question 3
       </h1>
 
-      <form class="form" action="/path/of/next/page" method="post">
+      <form class="form" action="/check-answers" method="post">
         {{ govukInput({
-          id: "question-3",
-          name: "question-3",
+          id: "question-three",
+          name: "question-three",
+          value: data['question-three'],
           label: {
             text: "Complete the sentence",
             classes: "govuk-label--l",
@@ -38,7 +39,7 @@
         }) }}
 
         {{
-          govukButton({ text: "Continue", href: "/check-answers" }) 
+          govukButton({ text: "Continue" }) 
         }}
 
       </form>

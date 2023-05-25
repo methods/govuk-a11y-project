@@ -7,15 +7,17 @@
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-m">Question 1</h1>
 
-    <form class="form" action="/path/of/next/page" method="post">
-      {{ govukRadios({ name: "wcag-key-principle", value: data['question-one'],
-      fieldset: { legend: { text: "Which of the following is a key principle of
-      Web Content Accessibility Guidelines (WCAG)?", isPageHeading: true,
-      classes: "govuk-fieldset__legend--l" } }, items: [ { value: "1", text:
-      "Visual Appeal Enhancement" }, { value: "2", text: "Device Compatibility
-      Optimization" }, { value: "3", text: "Perceptible Information" }, { value:
-      "4", text: "Search Engine Optimization (SEO) Techniques" } ] }) }} {{
-      govukButton({ text: "Continue", href: "/question-two" }) }}
+    <form class="form" action="/question-two" method="post">
+      {{ govukRadios({ name: "question-one", id: "question-one", fieldset: {
+      legend: { text: "Which of the following is a key principle of Web Content
+      Accessibility Guidelines (WCAG)?", isPageHeading: true, classes:
+      "govuk-fieldset__legend--l" }, value: data["question-one"] }, items: [ {
+      value: "Visual Appeal Enhancement", text: "Visual Appeal Enhancement" }, {
+      value: "Device Compatibility Optimization", text: "Device Compatibility
+      Optimization" }, { value: "Perceptible Information", text: "Perceptible
+      Information" }, { value: "Search Engine Optimization (SEO) Techniques",
+      text: "Search Engine Optimization (SEO) Techniques" } ] }) }} {{
+      govukButton({ text: "Continue"}) }}
     </form>
   </div>
 </div>
