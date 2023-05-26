@@ -21,7 +21,7 @@
       </h2>
 
       <p>
-        Question 1: {{ data['question-one'] }} this was the correct answer
+        Question 1: {{ data['question-one'] == 'Perceptible Information'}} this was the correct answer.
       </p>
 
       <p>
@@ -31,13 +31,10 @@
       <p>
         Question 3: {{ data['question-three'] }} this was the correct answer
       </p>
-      <p>
-        <a href="#">
-          What did you think of this service?
-        </a> (takes 30 seconds)
-      </p>
-
-
+   
+      <form class="form" action="/clear-data" method="post">
+        {{ govukButton({ text: "Start Again" }) }}
+      </form>
     </div>
   </div>
 

@@ -13,16 +13,15 @@
     <form class="form" action="/question-two" method="post">
       {{
         govukRadios({
-          name: "question-one",
           id: "question-one",
+          name: "question-one",
+          value: data["question-one"],
           fieldset: {
             legend: {
-              text: "Which of the following is a key principle of Web Content
-      Accessibility Guidelines (WCAG)?",
+              text: "Which of the following is a key principle of Web Content Accessibility Guidelines (WCAG)?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
-            },
-            value: data["question-one"]
+            }
           },
           items: [
             {
@@ -31,13 +30,11 @@
             },
             {
               value: "Device Compatibility Optimization",
-              text: "Device Compatibility
-      Optimization"
+              text: "Device Compatibility Optimization"
             },
             {
               value: "Perceptible Information",
-              text: "Perceptible
-      Information"
+              text: "Perceptible Information"
             },
             {
               value: "Search Engine Optimization (SEO) Techniques",

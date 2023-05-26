@@ -5,4 +5,13 @@
 
 window.GOVUKPrototypeKit.documentReady(() => {
   // Add JavaScript here
-})
+  
+  const clearDataButton = document.querySelector("#clear-data");
+  if (clearDataButton) {
+    let one = document.querySelector("#question-three")
+    clearDataButton.addEventListener("click", () => {
+      console.log(one);
+    });
+  }
+});
+
