@@ -21,6 +21,9 @@ router.post("/age-answer", function (req, res) {
 });
 
 router.post("/clear-data", function (req, res) {
-  req.session.data = {};
-  res.redirect("/info-page");
+  res.sendStatus(200);
+  // req.session.data = {};
+  // res.redirect("/info-page");
 });
+
+module.exports = router;
