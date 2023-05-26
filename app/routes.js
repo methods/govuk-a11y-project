@@ -13,7 +13,7 @@ router.post("/age-answer", function (req, res) {
   // Convert variable to number type and check whether the variable matches a condition
   if (+age >= 18) {
     // Send user to next page
-    res.redirect("/question-one");
+    res.redirect("/rules");
   } else {
     // Send user to ineligible page
     res.redirect("/ineligible");
@@ -21,9 +21,10 @@ router.post("/age-answer", function (req, res) {
 });
 
 router.post("/clear-data", function (req, res) {
-  res.sendStatus(200);
-  // req.session.data = {};
-  // res.redirect("/info-page");
+  // res.sendStatus(200);
+  req.session.data = {};
+  // console.log(req.session.data);
+  res.redirect("/info-page");
 });
 
 module.exports = router;

@@ -1,28 +1,29 @@
 const request = require("supertest");
 const router = require("../../routes");
-// const govukPrototypeKit = require("govuk-prototype-kit");
-// const router = govukPrototypeKit.requests.setupRouter();
+const express = require("express");
 
-
-// describe("POST /clear-data", () => {
-//   it("should clear session data and redirect to /info-page", async () => {
-//     const response = await request(router).post("/clear-data").send({});
-//     // console.log(response);
-//     // expect(response.status).toBe(302);
-//     expect(response.header.location).toBe("/info-page");
-//     expect(response.body).toEqual({});
-//     // You can also verify if the session data is cleared
-//     expect(req.session.data).toEqual({});
-//   });
-// });
+const app = express();
+app.use(router);
 
 describe("POST /clear-data", () => {
+  describe("when Start Again button is clicked", () => {
+    it("should clear session data", async () => {
+      const response = await request(app).post("/clear-data").send();
+      // expect(response).toBe("/info-page");
+      // expect(response.body).toEqual({});
+      // // You can also verify if the session data is cleared
+      expect(response.session).toEqual({});
+    });
+  });
+});
 
-  describe("when passed a username and password", () => {
-    test("should respond with a 200 status code", async () => {
-      const response = await request(router).post("/clear-data").send({});
-      expect(response.statusCode).toBe(200)
-    })
-  })
+// describe("POST /clear-data", () => {
 
-})
+//   describe("when passed a username and password", () => {
+//     test("should respond with a 200 status code", async () => {
+//       const response = await request(app).post("/clear-data").send();
+//       expect(response.statusCode).toBe(200)
+//     })
+//   })
+
+// })
