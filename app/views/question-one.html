@@ -10,7 +10,7 @@
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-m">Question 1</h1>
 
-    <form class="form" action="/question-two" method="post">
+    <form class="form" id="question-form" action="/question-two" method="post">
       {{
         govukRadios({
           id: "question-one",
@@ -43,9 +43,13 @@
           ]
         })
       }}
-      {{ govukButton({ text: "Continue" }) }}
+      {{ govukButton({ text: "Continue", id: "submit-button" }) }}
     </form>
+    {{ govukButton({ text: "50/50", id: "fifty-fifty", classes: "govuk-button--warning"}) }}
   </div>
 </div>
 
+{% endblock %}
+{% block pageScripts %}
+  <script type="module" src="/public/javascripts/question-one.js"></script>
 {% endblock %}

@@ -3,9 +3,9 @@
 // https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
 //
 
+function clearData(req, res) {
+  req.session.data = {};
+  res.redirect("/rules");
+}
 
-
-window.GOVUKPrototypeKit.documentReady(() => {
-  // Add JavaScript here
-
-});
+module.exports = clearData;
