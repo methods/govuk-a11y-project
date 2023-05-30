@@ -1,6 +1,6 @@
 const clearData = require("../javascripts/routes/clear-data");
 
-test("clears data from session", () => {
+describe("When Clear Data button is pressed", () => {
   const req = {
     session: {
       data: {
@@ -12,6 +12,12 @@ test("clears data from session", () => {
   const res = {
     redirect: jest.fn(),
   };
-  clearData(req, res);
-  expect(req.session.data).toEqual({"full-name": "John Smith", age: "18"}); // This is the same as the above
+  test("clears data from session", () => {
+    clearData(req, res);
+    expect(req.session.data).toEqual({ "full-name": "John Smith", age: "18" }); // This is the same as the above
+  });
+
+  test("redirect to /rules path", () => {
+    expect(res.redirect).toBeCalledWith("/rules");
+  });
 });

@@ -10,7 +10,8 @@ const clearData = require("./assets/javascripts/routes/clear-data");
 const checkScore = require("./assets/javascripts/routes/check-score");
 
 // Add your routes here
-router.get("/age-answer", function (req, res) {
+//this works with get also - why use post here?
+router.post("/age-answer", function (req, res) {
   checkAge(req, res);
 });
 

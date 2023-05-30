@@ -25,6 +25,7 @@ test('Handles form submission correctly', () => {
 
 });
 
+//TODO how do we test redirect with window.location.href?
 test('Redirects to score page when answer is not checked', () => {
   // Create a mock event object
   const event = {

@@ -4,8 +4,8 @@
 //
 
 // Function to remove half of the options
-function removeHalfOptions(fiftyFifty, options) {
-  fiftyFifty.style.display = "none";
+function removeHalfOptions(button, options) {
+  button.style.display = "none";
   options.forEach((option) => {
     const input = option.querySelector(".govuk-radios__input");
     // Hide all options except the correct one
