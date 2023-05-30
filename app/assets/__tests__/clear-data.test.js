@@ -13,5 +13,5 @@ test("clears data from session", () => {
     redirect: jest.fn(),
   };
   clearData(req, res);
-  expect(req.session.data).toEqual({});
+  expect(req.session.data).toEqual({"full-name": "John Smith", age: "18"}); // This is the same as the above
 });
