@@ -5,6 +5,7 @@
 
 // Function to remove half of the options
 function removeHalfOptions(button, options) {
+  //TODO: why doesn't hidden attribute work on gov button?
   button.style.display = "none";
   options.forEach((option) => {
     const input = option.querySelector(".govuk-radios__input");

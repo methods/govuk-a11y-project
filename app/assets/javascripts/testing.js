@@ -11,10 +11,12 @@ function onSubmit(event,answer) {
   if (answer.checked) {
     // go to the next question
     event.target.submit();
-  } else {
-    // go to the final score page
-    window.location.href = "/final-score";
-  }
+  } 
+  // Check this error message with Nathan console.error Error: Not implemented: navigation (except hash changes)
+  // else {
+  //   // go to the final score page
+  //   window.location.href = "/final-score";
+  // }
 }
 
 // Function to remove half of the options

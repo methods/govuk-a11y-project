@@ -4,11 +4,12 @@
 //
 
 // Function to handle form submission
-function onSubmit(event,answer) {
+function onSubmit(event,answerCheck) {
   // Prevent form submission
   event.preventDefault();
+
   //checked if the user has selected an option
-  if (answer.checked) {
+  if (answerCheck() == true) {
     // go to the next question
     event.target.submit();
   } else {

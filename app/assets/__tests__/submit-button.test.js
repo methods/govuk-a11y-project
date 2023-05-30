@@ -40,8 +40,11 @@ test('Redirects to score page when answer is not checked', () => {
     checked: false
   };
 
+ 
   // Call the onSubmit function
   onSubmit(event, answer);
+
+
 
   // Assertions
   expect(event.preventDefault).toHaveBeenCalled();

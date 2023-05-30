@@ -10,7 +10,7 @@
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-m">Question 2</h1>
 
-    <form class="form" action="/question-three" method="post">
+    <form class="form" id="question-form" action="/question-three" method="post">
       {{
         govukCheckboxes({
           name: "question-two",
@@ -56,7 +56,10 @@
       }}
       {{ govukButton({ text: "Continue" }) }}
     </form>
+    {{ govukButton({ text: "Hint", id: "hint", classes: "govuk-button--warning"}) }}
   </div>
 </div>
-
+{% endblock %}
+{% block pageScripts %}
+  <script type="module" src="/public/javascripts/question-two.js"></script>
 {% endblock %}
