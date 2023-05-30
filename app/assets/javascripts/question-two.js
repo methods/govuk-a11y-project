@@ -10,7 +10,7 @@ const option4 = document.querySelector("#question-two-4");
 const option5 = document.querySelector("#question-two-5");
 const option6 = document.querySelector("#question-two-6");
 
-// Add event listener to form submission and 50/50 button
+// Add event listener to form submission and hint button
 questionCheck.addEventListener("submit", (event)=>onSubmit(event,isCorrectCheck));
 hintBtn.addEventListener("click", () => visitLink())
 
