@@ -6,14 +6,12 @@ const hintBtn = document.querySelector("#fifty-fifty");
 const options = document.querySelectorAll(".govuk-radios__item");
 const option1 = document.querySelector("#question-one-3");
 
-
-
 function isCorrectCheck() {
-    let isCorrect = false;
-    if (option1.checked) {
-        isCorrect = true;
-    }
-    return isCorrect;
+  let isCorrect = false;
+  if (option1.checked) {
+    isCorrect = true;
+  }
+  return isCorrect;
 }
 
 // Add event listener to form submission and 50/50 button

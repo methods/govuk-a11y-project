@@ -12,12 +12,10 @@ test('Handles form submission correctly', () => {
   };
 
   // Create a mock answer element
-  const answer = {
-    checked: true
-  };
+  const answerCheckMock = jest.fn(() => true);
 
   // Call the onSubmit function
-  onSubmit(event, answer);
+  onSubmit(event, answerCheckMock);
 
   // Assertions
   expect(event.preventDefault).toHaveBeenCalled();
@@ -36,13 +34,12 @@ test('Redirects to score page when answer is not checked', () => {
   };
 
   // Create a mock answer element
-  const answer = {
-    checked: false
-  };
+  const answerCheckMock = jest.fn(() => false);
+
 
  
   // Call the onSubmit function
-  onSubmit(event, answer);
+  onSubmit(event, answerCheckMock);
 
 
 

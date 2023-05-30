@@ -4,19 +4,15 @@
 //
 
 // Function to handle form submission
-function onSubmit(event,answer) {
+function onSubmit(event,answerCheck) {
   // Prevent form submission
   event.preventDefault();
+
   //checked if the user has selected an option
-  if (answer.checked) {
+  if (answerCheck() == true) {
     // go to the next question
     event.target.submit();
   } 
-  // Check this error message with Nathan console.error Error: Not implemented: navigation (except hash changes)
-  // else {
-  //   // go to the final score page
-  //   window.location.href = "/final-score";
-  // }
 }
 
 // Function to remove half of the options
