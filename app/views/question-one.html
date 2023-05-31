@@ -10,19 +10,18 @@
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-m">Question 1</h1>
 
-    <form class="form" action="/question-two" method="post">
+    <form class="form" id="question-form" action="/question-two" method="post">
       {{
         govukRadios({
-          name: "question-one",
           id: "question-one",
+          name: "question-one",
+          value: data["question-one"],
           fieldset: {
             legend: {
-              text: "Which of the following is a key principle of Web Content
-      Accessibility Guidelines (WCAG)?",
+              text: "Which of the following is a key principle of Web Content Accessibility Guidelines (WCAG)?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
-            },
-            value: data["question-one"]
+            }
           },
           items: [
             {
@@ -31,13 +30,11 @@
             },
             {
               value: "Device Compatibility Optimization",
-              text: "Device Compatibility
-      Optimization"
+              text: "Device Compatibility Optimization"
             },
             {
               value: "Perceptible Information",
-              text: "Perceptible
-      Information"
+              text: "Perceptible Information"
             },
             {
               value: "Search Engine Optimization (SEO) Techniques",
@@ -46,9 +43,13 @@
           ]
         })
       }}
-      {{ govukButton({ text: "Continue" }) }}
+      {{ govukButton({ text: "Continue", id: "submit-button" }) }}
     </form>
+    {{ govukButton({ text: "50/50", id: "fifty-fifty", classes: "govuk-button--warning"}) }}
   </div>
 </div>
 
+{% endblock %}
+{% block pageScripts %}
+  <script type="module" src="/public/javascripts/question-one.js"></script>
 {% endblock %}

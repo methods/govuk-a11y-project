@@ -3,22 +3,23 @@
 // https://prototype-kit.service.gov.uk/docs/create-routes
 //
 
-const govukPrototypeKit = require('govuk-prototype-kit')
-const router = govukPrototypeKit.requests.setupRouter()
+const govukPrototypeKit = require("govuk-prototype-kit");
+const router = govukPrototypeKit.requests.setupRouter();
+const checkAge = require("./assets/javascripts/routes/check-age");
+const clearData = require("./assets/javascripts/routes/clear-data");
+const checkScore = require("./assets/javascripts/routes/check-score");
 
 // Add your routes here
-router.post('/age-answer', function (req, res) {
+//this works with get also - why use post here?
+router.post("/age-answer", function (req, res) {
+  checkAge(req, res);
+});
 
-  // Make a variable and give it the value from 'age'
-  const age = req.session.data['age']
+router.get("/calculate-score", function (req, res) {
+  checkScore(req, res);
+});
 
-  // Convert variable to number type and check whether the variable matches a condition
-  if (+age >= 18){
-    // Send user to next page
-    res.redirect('/question-one')
-  } else {
-    // Send user to ineligible page
-    res.redirect('/ineligible')
-  }
+router.post("/clear-data", function (req, res) {
+  clearData(req, res);
+});
 
-})
