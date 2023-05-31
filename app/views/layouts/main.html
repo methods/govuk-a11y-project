@@ -4,14 +4,39 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 #}
 
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+{% from "govuk/components/footer/macro.njk" import govukFooter %}
+
 
 {% block beforeContent %}
 {{ govukPhaseBanner({
     tag: {
       text: "Alpha"
     },
-    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+    html: 'This is a new service – your <a class="govuk-link" href="../feedback">feedback</a> will help us to improve it.'
   }) }}
+{% endblock %}
+
+{% block footer %}
+
+{{ govukFooter({
+  meta: {
+    items: [
+      {
+        href: "https://design-system.service.gov.uk/get-started/",
+        target: "_blank",
+        text: "Documentation"
+      },
+      {
+        href: "https://github.com/methods/govuk-a11y-project",
+        target: "_blank",
+        text: "Github Code"
+      },
+      {
+        href: "/manage-prototype/clear-data",
+        text: "Support"
+      }
+    ]
+  }
+}) }}
 {% endblock %}

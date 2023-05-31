@@ -14,7 +14,7 @@
         Player information
       </h1>
 
-      <form class="form" action="/age-answer" method="post" required>
+      <form class="form" action="/age-answer" method="post" novalidate>
 
         {{ govukInput({
         label: {
@@ -85,4 +85,7 @@
     </div>
   </div>
 
+{% endblock %}
+{% block pageScripts %}
+  <script type="module" src="/public/javascripts/info-validation.js"></script>
 {% endblock %}

@@ -11,7 +11,7 @@
   "dependencies": {
     "@govuk-prototype-kit/common-templates": "1.1.1",
     "govuk-frontend": "4.6.0",
-    "govuk-prototype-kit": "13.7.0"
+    "govuk-prototype-kit": "13.7.1"
   },
   "devDependencies": {
     "@types/jest": "^29.5.1",

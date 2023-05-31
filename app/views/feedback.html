@@ -1,0 +1,24 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+
+{% block pageTitle %}
+  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{{ govukCharacterCount({
+  name: "with-hint",
+  id: "with-hint",
+  maxlength: 200,
+  label: {
+    text: "Can you provide more detail?",
+    classes: "govuk-label--l",
+    isPageHeading: true
+  },
+  hint: {
+    text: "Do not include personal or financial information like your National Insurance number or credit card details."
+  }
+}) }}
+{{ govukButton({ text: "Submit" , href: "javascript:window.history.back()"}) }}
+{% endblock %}
