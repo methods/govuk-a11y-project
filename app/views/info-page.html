@@ -1,4 +1,6 @@
 {% extends "layouts/main.html" %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
 
 {% block pageTitle %}
   Question page template – {{ serviceName }} – GOV.UK Prototype Kit
@@ -12,7 +14,12 @@
 {% endblock %}
 
 {% block content %}
-
+{{ govukPhaseBanner({
+  tag: {
+    text: "Alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
@@ -50,19 +57,20 @@
             value: data["surname"]
           }) }}
 
-        {{ govukInput({
-          label: {
-          text: "Age",
-          classes: "govuk-label--m"
-        },
-          hint: {
-          text: "For example, 21"
-        },
-          classes: "govuk-input--width-2",
-          id: "age",
-          name: "age",
-          value: data["age"]
-        }) }}
+          {{ govukDateInput({
+            id: "dob",
+            namePrefix: "dob",
+            fieldset: {
+              legend: {
+                text: "Date of birth",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            hint: {
+              text: "For example, 27 3 2007"
+            }
+          }) }}
 
         {{ govukButton({
           text: "Continue"
