@@ -1,25 +1,13 @@
 {% extends "layouts/main.html" %} 
-{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 
 {% block pageTitle %} 
 Question page template –{{ serviceName }} – GOV.UK Prototype Kit 
 {% endblock %} 
-{% block beforeContent%}
-
-{{
-  govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
-}}
-{% endblock %} {% block content %}
-{{ govukPhaseBanner({
-  tag: {
-    text: "Alpha"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
+{% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-m">Well done {{data['name']}}, that was correct.<br>Now here's Question 2</h1>
+    <p class="govuk-heading-m">Well done {{data['name']}}, that was correct.</p>
 
     <form class="form" id="question-form" action="/question-three" method="post">
       {{

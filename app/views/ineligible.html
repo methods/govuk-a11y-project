@@ -1,5 +1,4 @@
 {% extends "layouts/main.html" %}
-{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 
 {% block pageTitle %}
   Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
@@ -7,12 +6,6 @@
 
 {% block content %}
 
-{{ govukPhaseBanner({
-  tag: {
-    text: "Alpha"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 

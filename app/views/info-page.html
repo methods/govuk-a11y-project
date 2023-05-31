@@ -1,25 +1,12 @@
 {% extends "layouts/main.html" %}
-{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 
 
 {% block pageTitle %}
   Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
-{% block beforeContent %}
-  {{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
-}) }}
-{% endblock %}
-
 {% block content %}
-{{ govukPhaseBanner({
-  tag: {
-    text: "Alpha"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
@@ -27,7 +14,7 @@
         Player information
       </h1>
 
-      <form class="form" action="/age-answer" method="post">
+      <form class="form" action="/age-answer" method="post" required>
 
         {{ govukInput({
         label: {
@@ -69,7 +56,24 @@
             },
             hint: {
               text: "For example, 27 3 2007"
+            },
+            items: [
+            {
+              name: 'day',
+              classes: 'govuk-input--width-2',
+              value: data['dob-day']
+            },
+            {
+              name: 'month',
+              classes: 'govuk-input--width-2',
+              value: data['dob-month']
+            },
+            {
+              name: 'year',
+              classes: 'govuk-input--width-4',
+              value: data['dob-year']
             }
+            ]
           }) }}
 
         {{ govukButton({
