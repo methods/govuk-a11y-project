@@ -3,9 +3,8 @@
 // https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
 //
 
+function checkScore(req, res) {
+  console.log(req.session.data.age);
+}
 
-
-window.GOVUKPrototypeKit.documentReady(() => {
-  // Add JavaScript here
-
-});
+module.exports = checkScore;

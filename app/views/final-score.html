@@ -11,7 +11,7 @@
 
       {{ govukPanel({
         titleText: "Congratulations",
-        html: "Your score is<br><strong>1 out of 3</strong>"
+        html: "Your score is<br><strong><span>1</span> out of 3</strong>"
       }) }}
 
      
@@ -19,9 +19,9 @@
       <h2 class="govuk-heading-m">
         Answers submitted
       </h2>
-
+      
       <p>
-        Question 1: {{ data['question-one'] == 'Perceptible Information'}} this was the correct answer.
+        Question 1: {{ data['question-one'] === 'Perceptible Information'}} Perceptible Information was the correct answer.
       </p>
 
       <p>

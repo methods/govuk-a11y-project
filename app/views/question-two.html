@@ -10,7 +10,7 @@
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-m">Question 2</h1>
 
-    <form class="form" action="/question-three" method="post">
+    <form class="form" id="question-form" action="/question-three" method="post">
       {{
         govukCheckboxes({
           name: "question-two",
@@ -56,7 +56,11 @@
       }}
       {{ govukButton({ text: "Continue" }) }}
     </form>
+    <a id="hint" target="_blank" href="https://abilitynet.org.uk/news-blogs/what-wcag-and-why-does-it-matter-day">{{ govukButton({ text: "Hint", classes: "govuk-button--warning" }) }}</a>
+  
   </div>
 </div>
-
+{% endblock %}
+{% block pageScripts %}
+  <script type="module" src="/public/javascripts/question-two.js"></script>
 {% endblock %}
