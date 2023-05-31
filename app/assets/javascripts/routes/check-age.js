@@ -9,7 +9,7 @@ function checkAge(req, res) {
   // Convert variable to number type and check whether the variable matches a condition
   if (+age >= 18) {
     // Send user to next page
-    res.redirect("/rules");
+    res.redirect("/check-details");
   } else {
     // Send user to ineligible page
     res.redirect("/ineligible");

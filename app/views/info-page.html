@@ -24,30 +24,44 @@
 
         {{ govukInput({
         label: {
-        text: "Full Name",
-        classes: "govuk-label--m"
+          text: "First Name",
+          classes: "govuk-label--m"
         },
         hint: {
-        text: "For example, Loren Thurman"
+          text: "For example, Loren"
         },
-        classes: "govuk-input--width-10",
-        id: "full-name",
-        name: "full-name",
-        value: data["full-name"]
+          classes: "govuk-input--width-10",
+          id: "name",
+          name: "name",
+          value: data["name"]
         }) }}
 
         {{ govukInput({
-        label: {
-        text: "Age",
-        classes: "govuk-label--m"
+          label: {
+            text: "Surname",
+            classes: "govuk-label--m"
+          },
+          hint: {
+            text: "For example, Thurman"
+          },
+            classes: "govuk-input--width-10",
+            id: "surname",
+            name: "surname",
+            value: data["surname"]
+          }) }}
+
+        {{ govukInput({
+          label: {
+          text: "Age",
+          classes: "govuk-label--m"
         },
-        hint: {
-        text: "For example, 21"
+          hint: {
+          text: "For example, 21"
         },
-        classes: "govuk-input--width-2",
-        id: "age",
-        name: "age",
-        value: data["age"]
+          classes: "govuk-input--width-2",
+          id: "age",
+          name: "age",
+          value: data["age"]
         }) }}
 
         {{ govukButton({

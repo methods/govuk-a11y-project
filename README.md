@@ -55,29 +55,29 @@ We came up with the idea of building a Who Wants to be a Millionaire themed quiz
 
 ## ⛓️ Dependencies / Limitations <a name = "limitations"></a>
 
-- [ ] Node.js
-- [ ] Jest
-- [ ] JsDom (for testing)
-- [ ] jest-environment-jsdom
+- Node.js
+- Jest
+- JsDom (for testing)
+- jest-environment-jsdom
 
 ## 🚀 Future Scope <a name = "future_scope"></a>
 
-- [ ] Step 1 - Add more questions
-- [ ] Step 2 - Add more lifelines
-- [ ] Step 3 - Add more styling
-- [ ] Step 4 - Add more accessibility features
-- [ ] Step 5 - Add more animations
-- [ ] Step 6 - Add more sound effects
-- [ ] Step 7 - Add more music
+- Step 1 - Add more questions
+- Step 2 - Add more lifelines
+- Step 3 - Add more styling
+- Step 4 - Add more accessibility features
+- Step 5 - Add more animations
+- Step 6 - Add more sound effects
+- Step 7 - Add more music
 
 
 ## 🎈 Usage <a name="usage"></a>
 
-- [ ] Step 1 - Clone the repo
-- [ ] Step 2 - Install dependencies `npm install`
-- [ ] Step 3 - Run the app
-- [ ] Step 4 - Open browser and navigate to `localhost:3000`
-- [ ] Step 5 - Enjoy!
+- Step 1 - Clone the repo
+- Step 2 - Install dependencies `npm install`
+- Step 3 - Run the app
+- Step 4 - Open browser and navigate to `localhost:3000`
+- Step 5 - Enjoy!
 
 ## 🏫 Lessons Learned <a name = "lessons_learned"></a>
 

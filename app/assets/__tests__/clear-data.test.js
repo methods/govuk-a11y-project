@@ -4,7 +4,8 @@ describe("When Clear Data button is pressed", () => {
   const req = {
     session: {
       data: {
-        "full-name": "John Smith",
+        name: "John",
+        surname: "Smith",
         age: "18",
       },
     },
@@ -14,8 +15,13 @@ describe("When Clear Data button is pressed", () => {
   };
   test("clears data from session", () => {
     clearData(req, res);
-    expect(req.session.data).toEqual({ "full-name": "John Smith", age: "18" }); // This is the same as the above
+    expect(req.session.data).toEqual({
+      name: "John",
+      surname: "Smith",
+      age: "18",
+    });
   });
+
 
   test("redirect to /rules path", () => {
     expect(res.redirect).toBeCalledWith("/rules");

@@ -17,33 +17,84 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-m">
-        Question 3
+        Great work {{data['name']}}!<br>Now for Question 3
       </h1>
 
-      <form class="form" action="/check-answers" method="post">
-        {{ govukInput({
-          id: "question-three",
-          name: "question-three",
-          value: data['question-three'],
-          label: {
-            text: "Complete the sentence",
-            classes: "govuk-label--l",
-            isPageHeading: true
-          },
-          prefix: {
-            text: "WCAG stands for:"
-          },
-          
-          classes: "govuk-input--width-36",
-          spellcheck: false
-        }) }}
-
+      <form class="question-form" action="/final-score" method="post">
         {{
-          govukButton({ text: "Continue" }) 
+          govukRadios({
+            id: "question-three",
+            name: "question-three",
+            value: data["question-three"],
+            fieldset: {
+              legend: {
+                text: "What does the 'A' stand for in WCAG?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            items: [
+              {
+                value: "anniversary",
+                text: "anniversary"
+              },
+              {
+                value: "accessibility",
+                text: "accessibility"
+              },
+              {
+                value: "aristocracy",
+                text: "aristocracy"
+              },
+              {
+                value: "antianxiety",
+                text: "antianxiety"
+              }
+            ]
+          })
         }}
+        {{ govukButton({ text: "Continue", id: "submit-button" }) }}
 
       </form>
-
+      {{ govukButton({ text: "Ask the audience", id: "ask-the-audience", classes: "govuk-button--warning"}) }}
+<div id="govuk-accordion" hidden>
+      {{ govukAccordion({
+        id: "Ask-the-audience-accordion",
+        items: [
+          {
+            heading: {
+              text: "anniversary"
+            },
+            content: {
+              html: "<p class='govuk-body'>This is the content for Writing well for the web.</p>"
+            }
+          },
+          {
+            heading: {
+              text: "accessibility"
+            },
+            content: {
+              html: "<p class='govuk-body'>This is the content for Writing well for specialists.</p>"
+            }
+          },
+          {
+            heading: {
+              text: "aristocracy"
+            },
+            content: {
+              html: "<p class='govuk-body'>This is the content for Know your audience.</p>"
+            }
+          },
+          {
+            heading: {
+              text: "antianxiety"
+            },
+            content: {
+              html: "<p class='govuk-body'>This is the content for How people read.</p>"
+            }
+          }
+        ]
+      }) }}
     </div>
   </div>
 

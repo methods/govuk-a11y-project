@@ -8,18 +8,16 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-      {{ govukPanel({
-        titleText: "Congratulations",
-        html: "Your score is<br><strong><span>1</span> out of 3</strong>"
-      }) }}
-
-     
-
-      <h2 class="govuk-heading-m">
-        Answers submitted
-      </h2>
-      
+      <h1 class="govuk-heading-l">Thank you for completing the quiz</h1>
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">
+          Congratulations {{ data.name + " " +  data["surname"] }}
+        </h1>
+        <h3 class="govuk-panel__title-m">
+          Your score was <br><strong><span>1 </span>out of 3</strong>
+        </h3>      
+      </div>
+  
       <p>
         Question 1: {{ data['question-one'] === 'Perceptible Information'}} Perceptible Information was the correct answer.
       </p>

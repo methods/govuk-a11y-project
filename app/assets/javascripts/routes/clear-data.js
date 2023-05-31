@@ -5,7 +5,8 @@
 
 function clearData(req, res) {
   req.session.data = {
-    "full-name": req.session.data["full-name"],
+    name: req.session.data['name'],
+    surname: req.session.data['surname'],
     age: req.session.data.age,
   };
   res.redirect("/rules");

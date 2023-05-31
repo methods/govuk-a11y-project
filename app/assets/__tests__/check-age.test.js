@@ -14,7 +14,7 @@ describe("Redirects depending on age", () => {
     };
     checkAge(req, res);
 
-    expect(res.redirect).toHaveBeenCalledWith("/rules");
+    expect(res.redirect).toHaveBeenCalledWith("/check-details");
   });
 
   test("Redirects to ineligible if age is under 18", () => {
