@@ -29,19 +29,19 @@
             items: [
               {
                 value: "anniversary",
-                text: "anniversary"
+                text: "Anniversary"
               },
               {
                 value: "accessibility",
-                text: "accessibility"
+                text: "Accessibility"
               },
               {
                 value: "aristocracy",
-                text: "aristocracy"
+                text: "Aristocracy"
               },
               {
                 value: "antianxiety",
-                text: "antianxiety"
+                text: "Antianxiety"
               }
             ]
           })
@@ -53,37 +53,38 @@
 <div id="govuk-accordion" hidden>
       {{ govukAccordion({
         id: "Ask-the-audience-accordion",
+        showAllSectionsText: "Reveal the results",
         items: [
           {
             heading: {
-              text: "anniversary"
+              text: "Anniversary"
             },
             content: {
-              html: "<p class='govuk-body'>This is the content for Writing well for the web.</p>"
+              html: "<div class='govuk-heading-s audience-vote-1'>20%<div><div></div></div></div>"
             }
           },
           {
             heading: {
-              text: "accessibility"
+              text: "Accessibility"
             },
             content: {
-              html: "<p class='govuk-body'>This is the content for Writing well for specialists.</p>"
+              html: "<div class='govuk-heading-s audience-vote-2'>60%<div><div></div></div></div>"
             }
           },
           {
             heading: {
-              text: "aristocracy"
+              text: "Aristocracy"
             },
             content: {
-              html: "<p class='govuk-body'>This is the content for Know your audience.</p>"
+              html: "<div class='govuk-heading-s audience-vote-3'>20%<div><div></div></div></div>"
             }
           },
           {
             heading: {
-              text: "antianxiety"
+              text: "Antianxiety"
             },
             content: {
-              html: "<p class='govuk-body'>This is the content for How people read.</p>"
+              html: "<div class='govuk-heading-s audience-vote-4'>20%<div><div></div></div></div>"
             }
           }
         ]
@@ -91,4 +92,7 @@
     </div>
   </div>
 
+{% endblock %}
+{% block pageScripts %}
+  <script type="module" src="/public/javascripts/question-three.js"></script>
 {% endblock %}
