@@ -14,7 +14,7 @@ function onSubmit(event,answerCheck) {
     event.target.submit();
   } else {
     // go to the final score page
-    window.location.href = "/final-score";
+    window.location.href = "/game-over";
   }
 }
 

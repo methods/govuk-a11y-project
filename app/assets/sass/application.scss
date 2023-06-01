@@ -12,7 +12,7 @@
 }
 
 .audience-vote-1 div > div {
-    background-color: blue;
+    background-color: govuk-colour("blue");
     width: 20%;
     height: 100%;
 }
@@ -23,7 +23,7 @@
 }
 
 .audience-vote-2 div > div {
-    background-color: blue;
+    background-color: govuk-colour("blue");
     width: 60%;
     height: 100%;
 }
@@ -34,7 +34,7 @@
 }
 
 .audience-vote-3 div > div {
-    background-color: blue;
+    background-color: govuk-colour("blue");
     width: 20%;
     height: 100%;
 }
@@ -45,7 +45,11 @@
 }
 
 .audience-vote-4 div > div {
-    background-color: blue;
+    background-color: govuk-colour("blue");
     width: 20%;
     height: 100%;
+}
+
+.game-over-panel {
+    background-color: govuk-colour("red");
 }
