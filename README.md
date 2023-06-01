@@ -1,94 +1,119 @@
 # Accessibility training with gov.uk Prototype Kit
 
+## 📝 Table of Contents
+
+- [Task](#task)
+- [Who we are ... Team AccessForce](#team-accessforce-presents)
+- [Problem Statement](#🧐-problem-statement)
+- [Idea / Solution](#💡-idea--solution)
+- [Dependencies / Limitations](#⛓️-dependencies--limitations)
+- [Future Scope](#🚀-future-scope)
+- [Setting up a local environment](#setup-and-run)
+    - [Prerequisites](#prerequisites)
+    - [Continue setup and run app](#continue-setup-and-run-app)
+- [Lessons Learned](#🏫-lessons-learned)
+- [Documentation](#📃-documentation)
+- [Authors](#✍️-authors)
+- [Acknowledgments](#acknowledgements)
+- [Resources](#resources)
+
 ## Task
 
 The goal of the 2 week prototype project is to:
 
 - Be able to work with the GDS prototype kit and have an understanding of the benefits of this design system; learn some components, styles and design patterns
-- Understanding why website accessibility is important especially government websites. Includes some time reading about why accessibility is important - things one should be thinking about when building an accessible website
-- responsiveness
-- colour contrast
-- ability tabbing through page
-- ability for screen readers to read content and navigate website
+- Understanding why website accessibility is important especially government websites. Includes some time reading about why accessibility is important - things one should be thinking about when building an accessible website should incluse
+  - responsiveness
+  - colour contrast
+  - ability to navigate through page (use of tab)
+  - ability for screen readers to read content and navigate website
 
-## Resources
+Other concepts to consider:
 
-- WCAG what it does and why - https://abilitynet.org.uk/news-blogs/what-wcag-and-why-does-it-matter-day
-- Useful resource for all things accessibility - https://www.digitala11y.com/web-accessibility-resources/
-- Short video (2minutes) explaining GOV.UK design system and purpose - https://www.youtube.com/watch?v=MMfqMSPKGj4
-- Video (33minutes) of how to setup and build a basic prototype using GOV.UK Prototype Kit - https://www.youtube.com/watch?v=_7sNrp5KIKg
+- Mobile first design
+- Website non-js friendly
 
-# Team AccessForce Presents
-<h3 align="center">
-    AccessForce proudly presents our prototype for the GOV.UK website.
-    <br> 
-    AccessForce is a team of 2 developers who are passionate about accessibility and inclusivity.
-</h3>
+## Team AccessForce Presents
 
-<p align="center"> 
-    The project is a 2 week prototype project to learn about accessibility and inclusivity, the project is built using the GOV.UK prototype kit but modified to be a Who Wants to be a Millionaire themed quiz game.
-</p>
+AccessForce proudly presents our prototype for the GOV.UK website. The team comprises of [2 developers](#✍️-authors) who are passionate about accessibility and inclusivity.
 
-## 📝 Table of Contents
+The project is a 2 week prototype project to learn about accessibility and inclusivity, the project is built using the GOV.UK prototype kit but modified to be a Who Wants to be a Millionaire themed quiz game.
 
-- [Problem Statement](#problem_statement)
-- [Idea / Solution](#idea)
-- [Dependencies / Limitations](#limitations)
-- [Future Scope](#future_scope)
-- [Setting up a local environment](#getting_started)
-- [Usage](#usage)
-- [Tech Stack](#tech_stack)
-- [Lessons Learned](#lessons_learned)
-- [Documentation](#documentation)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgments)
-
-## 🧐 Problem Statement <a name = "problem_statement"></a>
+## 🧐 Problem Statement
 
 Every year, millions of people visit the GOV.UK website to find information about government services. The website is designed to be accessible to everyone, including people with visual, hearing, cognitive or motor impairments. The website is also designed to be accessible to people who use assistive technology such as screen readers and speech recognition software.
 
 The goal of the 2 week prototype project is to educate ourselves on accessibility and inclusivity, and to build a prototype using the GOV.UK prototype kit.
 
-## 💡 Idea / Solution <a name = "idea"></a>
+## 💡 Idea / Solution
 
 We came up with the idea of building a Who Wants to be a Millionaire themed quiz game. The game is designed to be accessible to everyone, including people with visual, hearing, cognitive or motor impairments. The game is also designed to be accessible to people who use assistive technology such as screen readers and speech recognition software.
 
-## ⛓️ Dependencies / Limitations <a name = "limitations"></a>
+## ⛓️ Dependencies / Limitations
 
-- Node.js
+- Node.js and npm
 - Jest
 - JsDom (for testing)
 - jest-environment-jsdom
 
-## 🚀 Future Scope <a name = "future_scope"></a>
+## 🚀 Future Scope
 
-- Step 1 - Add more questions
-- Step 2 - Add more lifelines
-- Step 3 - Add more styling
-- Step 4 - Add more accessibility features
-- Step 5 - Add more animations
-- Step 6 - Add more sound effects
-- Step 7 - Add more music
+- Add more questions
+- Add more lifelines
+- Add more styling
+- Add more accessibility features
+- Add more animations
+- Add more sound effects
+- Add more music
 
+## 🎈 Setup and Run
 
-## 🎈 Usage <a name="usage"></a>
+### Prerequisites
 
-- Step 1 - Clone the repo
-- Step 2 - Install dependencies `npm install`
-- Step 3 - Run the app
-- Step 4 - Open browser and navigate to `localhost:3000`
-- Step 5 - Enjoy!
+Before attempting to run the app:
 
-## 🏫 Lessons Learned <a name = "lessons_learned"></a>
+- Install Node.js and npm on ...
+  - ... macOS run the following commands:
+    - Install Homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+    - Update Homebrew: `brew update`
+    - Install Node.js and npm: `brew install node`
+    - Check node version: `node -v`
+    - Check npm version: `npm -v`
+  - ... linux run the following commands:
+    - Update Apt: `sudo apt update`
+    - Install node: `sudo apt install nodejs`
+    - Check node version: `node -v`
+    - Install npm: `sudo apt install npm`
+    - Check npm version: `npm -v`
 
+### Continue setup and run app
 
-## 📃 Documentation <a name = "documentation"></a>
+- Clone the repo
+- Install dependencies with `npm install`
+- Run the app with `npm run dev`
+- Open browser and navigate to [localhost:3000](http://127.0.0.1:3000)
+- Enjoy!
+
+## 🏫 Lessons Learned
+
+## 📃 Documentation
 
 - [Trello](https://trello.com/b/SMnDEoYm/accessibility#)
 - [Figma](https://www.figma.com/file/VeMv9nnjFmqWFcmqCGph5h/Gov-Prototype?type=design&node-id=0%3A1&t=ZapogPQYCARIDz8B-1)
 - [JamBoard](https://jamboard.google.com/d/1Nn_IjJ6DRoyo_7J3P9lSn4jcWulA2igEX8womG1qSIw/viewer?f=0)
 
-## ✍️ Authors <a name = "authors"></a>
+## ✍️ Authors
 
-- https://github.com/Lakorthus - Julio Velezmoro
-- https://github.com/piratejas - Pira Tejasakulsin
+- [Julio Velezmoro](https://github.com/Lakorthus)
+- [Pira Tejasakulsin](https://github.com/piratejas)
+
+## Acknowledgements
+
+## Resources
+
+- [WCAG what it does and why](https://abilitynet.org.uk/news-blogs/what-wcag-and-why-does-it-matter-day)
+- [All things accessibility](https://www.digitala11y.com/web-accessibility-resources/)
+- [Some Accessibility Best Practices](https://docs.pantheon.io/guides/accessibility/best-practices)
+- [Why website non-javascript friendly?](https://endtimes.dev/why-your-website-should-work-without-javascript)
+- [Short video (2minutes) explaining GOV.UK design system and purpose](https://www.youtube.com/watch?v=MMfqMSPKGj4)
+- [Video (33minutes) of how to setup and build a basic prototype using GOV.UK Prototype Kit](https://www.youtube.com/watch?v=_7sNrp5KIKg)
