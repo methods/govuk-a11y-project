@@ -4,16 +4,16 @@
 
 - [Task](#task)
 - [Who we are ... Team AccessForce](#team-accessforce-presents)
-- [Problem Statement](#🧐-problem-statement)
-- [Idea / Solution](#💡-idea--solution)
-- [Dependencies / Limitations](#⛓️-dependencies--limitations)
-- [Future Scope](#🚀-future-scope)
+- [Problem Statement](#-problem-statement)
+- [Idea / Solution](#-idea--solution)
+- [Dependencies / Limitations](#-dependencies--limitations)
+- [Future Scope](#-future-scope)
 - [Setting up a local environment](#setup-and-run)
     - [Prerequisites](#prerequisites)
     - [Continue setup and run app](#continue-setup-and-run-app)
-- [Lessons Learned](#🏫-lessons-learned)
-- [Documentation](#📃-documentation)
-- [Authors](#✍️-authors)
+- [Lessons Learned](#-lessons-learned)
+- [Documentation](#-documentation)
+- [Authors](#-authors)
 - [Acknowledgments](#acknowledgements)
 - [Resources](#resources)
 
@@ -35,7 +35,7 @@ Other concepts to consider:
 
 ## Team AccessForce Presents
 
-AccessForce proudly presents our prototype for the GOV.UK website. The team comprises of [2 developers](#✍️-authors) who are passionate about accessibility and inclusivity.
+AccessForce proudly presents our prototype for the GOV.UK website. The team comprises of [2 developers](#-authors) who are passionate about accessibility and inclusivity.
 
 The project is a 2 week prototype project to learn about accessibility and inclusivity, the project is built using the GOV.UK prototype kit but modified to be a Who Wants to be a Millionaire themed quiz game.
 
