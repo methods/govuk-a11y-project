@@ -22,4 +22,3 @@ router.get("/calculate-score", function (req, res) {
 router.post("/clear-data", function (req, res) {
   clearData(req, res);
 });
-

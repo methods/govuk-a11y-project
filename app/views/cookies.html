@@ -2,8 +2,79 @@
 template – {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block
 content %}
 
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+{% set html %}
+  <p class="govuk-notification-banner__heading">
+    You’ve set your cookie preferences. <a class="govuk-notification-banner__link" href="/info-page">Go back to the start of the game</a>.
+  </p>
+{% endset %}
+
+<div class="govuk-grid-row">
+  <div id="message-success" hidden>
+    {{ govukNotificationBanner({
+      type: "success",
+      html: html
+    }) }}
+  </div>
+  <div id='cookie-form' class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-l">Change your cookie settings</h2>
+    <div>
+      {{ govukRadios({
+          name: "functional-cookies",
+          
+          fieldset: {
+            legend: {
+              text: "Do you want to accept functional cookies?",
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No",
+              checked: true
+            }
+          ]
+        }) }}
+
+        {{ govukRadios({
+          name: "analytics-cookies",
+          fieldset: {
+            legend: {
+              text: "Do you want to accept analytics cookies?",
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No",
+              checked: true
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Save cookie settings",
+          id: "save-cookie-settings"
+        }) }}
+    </div>
+  </div>
+</div>
+
 <Container style="margin: auto; max-width: 3xl; padding: 6px">
-  <h1 style="padding-bottom: 4px">AccessForce Cookie Policy</h1>
+  <h1 style="padding-bottom: 4px">Cookie Policy</h1>
 
   <p style="padding-bottom: 4px">
     <strong>What Are Cookies</strong>
@@ -132,4 +203,8 @@ content %}
   
 </Container>
 
+{% endblock %}
+
+{% block pageScripts %}
+  <script type="module" src="/public/javascripts/cookies-page.js"></script>
 {% endblock %}
