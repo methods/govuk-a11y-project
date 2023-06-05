@@ -20,5 +20,11 @@
     text: "Do not include personal or financial information like your National Insurance number or credit card details."
   }
 }) }}
-{{ govukButton({ text: "Submit" , href: "javascript:window.history.back()"}) }}
+{{ govukButton({ id:"js", text: "Submit" , href: "javascript:window.history.back()"}) }}
+<noscript>
+  <style>
+    #js {display: none}
+  </style>
+{{ govukButton({ id:"nojs", text: "Submit", href: "/info-page"}) }}
+</noscript>
 {% endblock %}

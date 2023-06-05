@@ -26,7 +26,6 @@ const rejectButton = document.getElementById("cookie-btn-1");
 const hideAcceptButton = document.getElementById("cookie-btn-2");
 const hideRejectButton = document.getElementById("cookie-btn-3");
 
-console.log(container);
 
 function acceptCookie() {
   cookieBanner.setAttribute("hidden", "true");
