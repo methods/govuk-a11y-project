@@ -13,7 +13,7 @@
       <p class="govuk-heading-m">Well done {{data['name']}}, that was correct.</p>
 
 
-      <form class="question-form" action="/final-score" method="post">
+      <form class="question-form" action="/check-answer-three" method="post">
         {{
           govukRadios({
             id: "question-three",
@@ -53,14 +53,14 @@
       <div id="govuk-accordion" hidden>
       {{ govukAccordion({
         id: "Ask-the-audience-accordion",
-        showAllSectionsText: "Reveal the results",
+        showAllSectionsText: "Reveal audience vote",
         items: [
           {
             heading: {
               text: "Anniversary"
             },
             content: {
-              html: "<div class='govuk-heading-s audience-vote-1'>20%<div><div></div></div></div>"
+              html: "<div class='govuk-heading-s audience-vote-1'>11%<div><div></div></div></div>"
             }
           },
           {
@@ -68,7 +68,7 @@
               text: "Accessibility"
             },
             content: {
-              html: "<div class='govuk-heading-s audience-vote-2'>60%<div><div></div></div></div>"
+              html: "<div class='govuk-heading-s audience-vote-2'>66%<div><div></div></div></div>"
             }
           },
           {
@@ -76,7 +76,7 @@
               text: "Aristocracy"
             },
             content: {
-              html: "<div class='govuk-heading-s audience-vote-3'>20%<div><div></div></div></div>"
+              html: "<div class='govuk-heading-s audience-vote-3'>2%<div><div></div></div></div>"
             }
           },
           {
@@ -84,14 +84,20 @@
               text: "Antianxiety"
             },
             content: {
-              html: "<div class='govuk-heading-s audience-vote-4'>20%<div><div></div></div></div>"
+              html: "<div class='govuk-heading-s audience-vote-4'>21%<div><div></div></div></div>"
             }
           }
         ]
       }) }}
     </div>
   </div>
-
+  <noscript>
+    <style>
+      #ask-the-audience {
+        display: none;
+      }
+    </style>
+  </noscript>
 {% endblock %}
 {% block pageScripts %}
   <script type="module" src="/public/javascripts/question-three.js"></script>

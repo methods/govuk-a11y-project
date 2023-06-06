@@ -9,7 +9,7 @@ Question page template –{{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-column-two-thirds">
     <p class="govuk-heading-m">Well done {{data['name']}}, that was correct.</p>
 
-    <form class="form" id="question-form" action="/question-three" method="post">
+    <form class="form" id="question-form" action="/check-answer-two" method="post">
       {{
         govukCheckboxes({
           name: "question-two",
@@ -59,6 +59,13 @@ Question page template –{{ serviceName }} – GOV.UK Prototype Kit
   
   </div>
 </div>
+<noscript>
+  <style>
+    #hint {
+      display: none;
+    }
+  </style>
+</noscript>
 {% endblock %}
 {% block pageScripts %}
   <script type="module" src="/public/javascripts/question-two.js"></script>

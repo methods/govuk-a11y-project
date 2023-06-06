@@ -3,17 +3,6 @@
 // https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
 //
 
-// Function to handle form submission
-function onSubmit(event,answerCheck) {
-  // Prevent form submission
-  event.preventDefault();
-
-  //checked if the user has selected an option
-  if (answerCheck() == true) {
-    // go to the next question
-    event.target.submit();
-  } 
-}
 
 // Function to remove half of the options
 function removeHalfOptions(fiftyFifty, options) {
@@ -69,4 +58,4 @@ function showError(field, message) {
 }
 
 // Export the function for testing
-module.exports = { removeHalfOptions, onSubmit, isValidName, isValidDOB, showError };
+module.exports = { removeHalfOptions, isValidName, isValidDOB, showError };

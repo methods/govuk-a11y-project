@@ -8,7 +8,7 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" id="question-form" action="/question-two" method="post">
+    <form class="form" id="question-form" action="/check-answer-one" method="post">
       {{
         govukRadios({
           id: "question-one",
@@ -46,6 +46,13 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
     {{ govukButton({ text: "50/50", id: "fifty-fifty", classes: "govuk-button--warning"}) }}
   </div>
 </div>
+<noscript>
+  <style>
+    #fifty-fifty {
+      display: none;
+    }
+  </style>
+</noscript>
 
 {% endblock %}
 {% block pageScripts %}

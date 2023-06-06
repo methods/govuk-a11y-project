@@ -1,4 +1,4 @@
-const checkAge = require("../javascripts/routes/check-age");
+const checkAge = require("../javascripts/models/check-age");
 
 describe("Redirects depending on age", () => {
   test("Redirects to check-details if age is 18 or over", () => {

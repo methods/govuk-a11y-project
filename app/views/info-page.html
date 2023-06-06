@@ -27,6 +27,7 @@
           classes: "govuk-input--width-10",
           id: "name",
           name: "name",
+          autocomplete: "given-name",
           value: data["name"] 
         }) }}
 
@@ -41,6 +42,7 @@
             classes: "govuk-input--width-10",
             id: "surname",
             name: "surname",
+            autocomplete: "family-name",
             value: data["surname"]
           }) }}
 
@@ -60,16 +62,19 @@
             items: [
             {
               name: 'day',
+              autocomplete: 'bday-day',
               classes: 'govuk-input--width-2',
               value: data['dob-day']
             },
             {
               name: 'month',
+              autocomplete: 'bday-month',
               classes: 'govuk-input--width-2',
               value: data['dob-month']
             },
             {
               name: 'year',
+              autocomplete: 'bday-year',
               classes: 'govuk-input--width-4',
               value: data['dob-year']
             }

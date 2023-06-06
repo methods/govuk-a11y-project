@@ -1,4 +1,4 @@
-const clearData = require("../javascripts/routes/clear-data");
+const clearData = require("../javascripts/models/clear-data");
 
 describe("When Clear Data button is pressed", () => {
   const req = {
