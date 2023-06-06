@@ -2,18 +2,18 @@
 
 ## 📝 Table of Contents
 
-- [Task](#tas)
+- [Task](#task)
 - [Who we are ... Team AccessForce](#team-accessforce-presents)
 - [Problem Statement](#-problem-statement)
 - [Idea / Solution](#-idea--solution)
-- [Dependencies / Limitations](#-dependencies--limitations)
+- [Dependencies / Limitations](#%EF%B8%8F-dependencies--limitations)
 - [Future Scope](#-future-scope)
-- [Setting up a local environment](#setup-and-run)
+- [Setting up a local environment](#-setup-and-run)
     - [Prerequisites](#prerequisites)
     - [Continue setup and run app](#continue-setup-and-run-app)
 - [Lessons Learned](#-lessons-learned)
 - [Documentation](#-documentation)
-- [Authors](#-authors)
+- [Authors](#%EF%B8%8F-authors)
 - [Acknowledgments](#acknowledgements)
 - [Resources](#resources)
 
@@ -111,9 +111,14 @@ Before attempting to run the app:
 
 ## Resources
 
+- [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk/docs/tutorials-and-guides)
+- [GOV.UK Design System](https://design-system.service.gov.uk/)
+- [GOV.UK Service Manual - Accessibility & Assisted Digital](https://www.gov.uk/service-manual/helping-people-to-use-your-service)
 - [WCAG what it does and why](https://abilitynet.org.uk/news-blogs/what-wcag-and-why-does-it-matter-day)
 - [All things accessibility](https://www.digitala11y.com/web-accessibility-resources/)
 - [Some Accessibility Best Practices](https://docs.pantheon.io/guides/accessibility/best-practices)
 - [Why website non-javascript friendly?](https://endtimes.dev/why-your-website-should-work-without-javascript)
 - [Short video (2minutes) explaining GOV.UK design system and purpose](https://www.youtube.com/watch?v=MMfqMSPKGj4)
 - [Video (33minutes) of how to setup and build a basic prototype using GOV.UK Prototype Kit](https://www.youtube.com/watch?v=_7sNrp5KIKg)
+- [Nunjucks documentation](https://mozilla.github.io/nunjucks/)
+- [Full list of HTML standard autofill field names](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill)
