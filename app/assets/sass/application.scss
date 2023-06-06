@@ -4,3 +4,48 @@
 // 
 
 // Add extra styles here
+
+.audience-vote-1 div {
+    width: 100%;
+    height: 50px;
+}
+
+.audience-vote-1 div > div {
+    background-color: govuk-colour("blue");
+    width: 11%;
+    height: 100%;
+}
+.audience-vote-2 div {
+    width: 100%;
+    height: 50px;
+}
+
+.audience-vote-2 div > div {
+    background-color: govuk-colour("blue");
+    width: 66%;
+    height: 100%;
+}
+.audience-vote-3 div {
+    width: 100%;
+    height: 50px;
+}
+
+.audience-vote-3 div > div {
+    background-color: govuk-colour("blue");
+    width: 2%;
+    height: 100%;
+}
+.audience-vote-4 div {
+    width: 100%;
+    height: 50px;
+}
+
+.audience-vote-4 div > div {
+    background-color: govuk-colour("blue");
+    width: 21%;
+    height: 100%;
+}
+
+.game-over-panel {
+    background-color: govuk-colour("red");
+}

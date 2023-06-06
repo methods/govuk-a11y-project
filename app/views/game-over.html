@@ -10,13 +10,20 @@
     <div class="govuk-grid-column-two-thirds">
 
       {{ govukPanel({
-        titleHtml: "🥳" + data.name + " " + data["surname"] + "🥳",
-        html: "Accessibility quiz completed"
+        titleText: "Game Over!",
+        html: "That was the wrong answer",
+        classes: "game-over-panel"
       }) }}
+
       <h2 class="govuk-heading-m">
-        You are an accessibility champion! 🏆
+        Better luck next time, {{data.name}}
       </h2>
-     
+
+      <p>
+        You can review the WCAG standards
+        <a target="_blank" href="https://www.w3.org/WAI/standards-guidelines/wcag/">here</a>.
+      </p>
+
       <form class="form" action="/clear-data" method="post">
         {{ govukButton({ text: "Start Again" }) }}
       </form>

@@ -1,0 +1,68 @@
+{% set html %}
+<p class="govuk-body">We use some essential cookies to make this service work.</p>
+<p class="govuk-body">We’d also like to use analytics cookies so we can understand how you use the service and make improvements.</p>
+{% endset %}
+
+{% set acceptHtml %}
+<p class="govuk-body">You’ve accepted analytics cookies. You can <a class="govuk-link" href="/cookies">change your cookie settings</a> at any time.</p>
+{% endset %}
+
+{% set rejectHtml %}
+<p class="govuk-body">You’ve rejected analytics cookies. You can <a class="govuk-link" href="/cookies">change your cookie settings</a> at any time.</p>
+{% endset %}
+
+{{ govukCookieBanner({
+    ariaLabel: "Cookies on WCAG Quiz",
+    messages: [
+    {
+      headingText: "Cookies on WCAG Quiz",
+      id: "global-cookie-message",
+      hidden: false,
+        html: html,
+        actions: [
+          {
+            text: "Accept analytics cookies",
+            type: "submit",
+            name: "cookie-settings",
+            value: "accept"
+          },
+          {
+            text: "Reject analytics cookies",
+            type: "submit",
+            name: "cookie-settings",
+            value: "reject"
+          },
+          {
+            text: "View cookies",
+            href: "/cookies"
+          }
+        ]
+      },
+      {
+        html: acceptHtml,
+        id: "global-cookie-message-accepted",
+        role: "alert",
+        hidden: true,
+        actions: [
+          {
+            text: "Hide cookie message"
+          }
+        ]
+      },
+      {
+        html: rejectHtml,
+        id: "global-cookie-message-rejected",
+        role: "alert",
+        hidden: true,
+        actions: [
+          {
+            text: "Hide cookie message"
+          }
+        ]
+      }
+    ]
+  }) }}
+
+  {% block pageScripts %}
+  <script type="module" src="/public/javascripts/cookies-banner.js"></script>
+{% endblock %}

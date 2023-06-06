@@ -1,0 +1,52 @@
+{% extends "layouts/main.html" %} 
+
+{% block pageTitle %} 
+Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit {% endblock %}
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+    <h1 class="govuk-heading-xl">Check your answers before submitting</h1>
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Full name"
+          },
+          value: { text: data["name"] + " " +  data["surname"]},
+          actions: {
+            items: [
+              {
+                href: "./info-page.html",
+                text: "Change",
+                visuallyHiddenText: "full name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Age"
+          },
+          value: { text: data.age},
+
+          actions: {
+            items: [
+              {
+                href: "./info-page.html",
+                text: "Change",
+                visuallyHiddenText: "age"
+              }
+            ]
+          }
+        }
+        
+      ]
+    }) }}
+    <form action="/rules" method="post" novalidate>
+      {{ govukButton({ text: "Submit" }) }}
+    </form>
+  </div>
+</div>
+{% endblock %}

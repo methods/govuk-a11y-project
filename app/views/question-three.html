@@ -4,47 +4,101 @@
   Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
-{% block beforeContent %}
-  {{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
-}) }}
-{% endblock %}
-
 {% block content %}
+
+
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-heading-m">Well done {{data['name']}}, that was correct.</p>
 
-      <h1 class="govuk-heading-m">
-        Question 3
-      </h1>
 
-      <form class="form" action="/check-answers" method="post">
-        {{ govukInput({
-          id: "question-three",
-          name: "question-three",
-          value: data['question-three'],
-          label: {
-            text: "Complete the sentence",
-            classes: "govuk-label--l",
-            isPageHeading: true
-          },
-          prefix: {
-            text: "WCAG stands for:"
-          },
-          
-          classes: "govuk-input--width-36",
-          spellcheck: false
-        }) }}
-
+      <form class="question-form" action="/check-answer-three" method="post">
         {{
-          govukButton({ text: "Continue" }) 
+          govukRadios({
+            id: "question-three",
+            name: "question-three",
+            value: data["question-three"],
+            fieldset: {
+              legend: {
+                text: "What does the 'A' stand for in WCAG?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            items: [
+              {
+                value: "anniversary",
+                text: "Anniversary"
+              },
+              {
+                value: "accessibility",
+                text: "Accessibility"
+              },
+              {
+                value: "aristocracy",
+                text: "Aristocracy"
+              },
+              {
+                value: "antianxiety",
+                text: "Antianxiety"
+              }
+            ]
+          })
         }}
+        {{ govukButton({ text: "Continue", id: "submit-button" }) }}
 
       </form>
-
+      {{ govukButton({ text: "Ask the audience", id: "ask-the-audience", classes: "govuk-button--warning"}) }}
+      <div id="govuk-accordion" hidden>
+      {{ govukAccordion({
+        id: "Ask-the-audience-accordion",
+        showAllSectionsText: "Reveal audience vote",
+        items: [
+          {
+            heading: {
+              text: "Anniversary"
+            },
+            content: {
+              html: "<div class='govuk-heading-s audience-vote-1'>11%<div><div></div></div></div>"
+            }
+          },
+          {
+            heading: {
+              text: "Accessibility"
+            },
+            content: {
+              html: "<div class='govuk-heading-s audience-vote-2'>66%<div><div></div></div></div>"
+            }
+          },
+          {
+            heading: {
+              text: "Aristocracy"
+            },
+            content: {
+              html: "<div class='govuk-heading-s audience-vote-3'>2%<div><div></div></div></div>"
+            }
+          },
+          {
+            heading: {
+              text: "Antianxiety"
+            },
+            content: {
+              html: "<div class='govuk-heading-s audience-vote-4'>21%<div><div></div></div></div>"
+            }
+          }
+        ]
+      }) }}
     </div>
   </div>
-
+  <noscript>
+    <style>
+      #ask-the-audience {
+        display: none;
+      }
+    </style>
+  </noscript>
+{% endblock %}
+{% block pageScripts %}
+  <script type="module" src="/public/javascripts/question-three.js"></script>
 {% endblock %}

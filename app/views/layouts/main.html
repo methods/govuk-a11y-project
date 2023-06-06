@@ -1,6 +1,58 @@
 {#
-For guidance on how to use layouts see:
-https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
-#}
+  For guidance on how to use layouts see:
+  https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+  #}
+  
+  {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+  {% from "govuk/components/footer/macro.njk" import govukFooter %}
+  
+  {% block bodyStart %}
+  
+  {% include "cookie-banner.html" %}
 
-{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+  {% endblock %}
+  
+  {% block beforeContent %}
+  {{ govukPhaseBanner({
+      tag: {
+        text: "Alpha"
+      },
+      html: 'This is a new service – your <a class="govuk-link" href="/feedback">feedback</a> will help us to improve it.'
+    }) }}
+  {% endblock %}
+  
+  {% block footer %}
+  
+  {{ govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://design-system.service.gov.uk/get-started/",
+          target: "_blank",
+          text: "Documentation",
+          attributes: {
+            target: "_blank"
+          }
+        },
+        {
+          href: "https://github.com/methods/govuk-a11y-project",
+          target: "_blank",
+          text: "Github Code",
+          attributes: {
+            target: "_blank"
+          }
+        },
+        {
+          href: "/manage-prototype/clear-data",
+          text: "Support",
+          attributes: {
+            target: "_blank"
+          }
+        }
+      ]
+    }
+  }) }}
+  {% endblock %}
+
+  

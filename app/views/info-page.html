@@ -1,14 +1,8 @@
 {% extends "layouts/main.html" %}
 
+
 {% block pageTitle %}
   Question page template – {{ serviceName }} – GOV.UK Prototype Kit
-{% endblock %}
-
-{% block beforeContent %}
-  {{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
-}) }}
 {% endblock %}
 
 {% block content %}
@@ -20,43 +14,84 @@
         Player information
       </h1>
 
-      <form class="form" action="/age-answer" method="post">
+      <form class="form" action="/age-answer" method="post" novalidate>
 
         {{ govukInput({
         label: {
-        text: "Full Name",
-        classes: "govuk-label--m"
+          text: "First Name",
+          classes: "govuk-label--m"
         },
         hint: {
-        text: "For example, Loren Thurman"
+          text: "For example, Loren"
         },
-        classes: "govuk-input--width-10",
-        id: "full-name",
-        name: "full-name",
-        value: data["full-name"]
+          classes: "govuk-input--width-10",
+          id: "name",
+          name: "name",
+          autocomplete: "given-name",
+          value: data["name"] 
         }) }}
 
         {{ govukInput({
-        label: {
-        text: "Age",
-        classes: "govuk-label--m"
-        },
-        hint: {
-        text: "For example, 21"
-        },
-        classes: "govuk-input--width-2",
-        id: "age",
-        name: "age",
-        value: data["age"]
-        }) }}
+          label: {
+            text: "Surname",
+            classes: "govuk-label--m"
+          },
+          hint: {
+            text: "For example, Thurman"
+          },
+            classes: "govuk-input--width-10",
+            id: "surname",
+            name: "surname",
+            autocomplete: "family-name",
+            value: data["surname"]
+          }) }}
+
+          {{ govukDateInput({
+            id: "dob",
+            namePrefix: "dob",
+            fieldset: {
+              legend: {
+                text: "Date of birth",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            hint: {
+              text: "For example, 27 3 2007"
+            },
+            items: [
+            {
+              name: 'day',
+              autocomplete: 'bday-day',
+              classes: 'govuk-input--width-2',
+              value: data['dob-day']
+            },
+            {
+              name: 'month',
+              autocomplete: 'bday-month',
+              classes: 'govuk-input--width-2',
+              value: data['dob-month']
+            },
+            {
+              name: 'year',
+              autocomplete: 'bday-year',
+              classes: 'govuk-input--width-4',
+              value: data['dob-year']
+            }
+            ]
+          }) }}
 
         {{ govukButton({
           text: "Continue"
         }) }}
 
       </form>
+        
 
     </div>
   </div>
 
+{% endblock %}
+{% block pageScripts %}
+  <script type="module" src="/public/javascripts/info-validation.js"></script>
 {% endblock %}

@@ -1,16 +1,14 @@
-{% extends "layouts/main.html" %} {% block pageTitle %} Question page template –
-{{ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent
-%}
-{{
-  govukBackLink({ text: "Back", href: "javascript:window.history.back()" })
-}}
-{% endblock %} {% block content %}
+{% extends "layouts/main.html" %} 
+
+{% block pageTitle %} 
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit 
+{% endblock %} 
+{% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-m">Question 1</h1>
 
-    <form class="form" id="question-form" action="/question-two" method="post">
+    <form class="form" id="question-form" action="/check-answer-one" method="post">
       {{
         govukRadios({
           id: "question-one",
@@ -48,6 +46,13 @@
     {{ govukButton({ text: "50/50", id: "fifty-fifty", classes: "govuk-button--warning"}) }}
   </div>
 </div>
+<noscript>
+  <style>
+    #fifty-fifty {
+      display: none;
+    }
+  </style>
+</noscript>
 
 {% endblock %}
 {% block pageScripts %}
