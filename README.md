@@ -4,16 +4,16 @@
 
 - [Task](#task)
 - [Who we are ... Team AccessForce](#team-accessforce-presents)
-- [Problem Statement](#🧐-problem-statement)
-- [Idea / Solution](#💡-idea--solution)
-- [Dependencies / Limitations](#⛓️-dependencies--limitations)
-- [Future Scope](#🚀-future-scope)
-- [Setting up a local environment](#setup-and-run)
+- [Problem Statement](#-problem-statement)
+- [Idea / Solution](#-idea--solution)
+- [Dependencies / Limitations](#%EF%B8%8F-dependencies--limitations)
+- [Future Scope](#-future-scope)
+- [Setting up a local environment](#-setup-and-run)
     - [Prerequisites](#prerequisites)
     - [Continue setup and run app](#continue-setup-and-run-app)
-- [Lessons Learned](#🏫-lessons-learned)
-- [Documentation](#📃-documentation)
-- [Authors](#✍️-authors)
+- [Lessons Learned](#-lessons-learned)
+- [Documentation](#-documentation)
+- [Authors](#%EF%B8%8F-authors)
 - [Acknowledgments](#acknowledgements)
 - [Resources](#resources)
 
@@ -35,7 +35,7 @@ Other concepts to consider:
 
 ## Team AccessForce Presents
 
-AccessForce proudly presents our prototype for the GOV.UK website. The team comprises of [2 developers](#✍️-authors) who are passionate about accessibility and inclusivity.
+AccessForce proudly presents our prototype for the GOV.UK website. The team comprises of [2 developers](#-authors) who are passionate about accessibility and inclusivity.
 
 The project is a 2 week prototype project to learn about accessibility and inclusivity, the project is built using the GOV.UK prototype kit but modified to be a Who Wants to be a Millionaire themed quiz game.
 
@@ -111,9 +111,14 @@ Before attempting to run the app:
 
 ## Resources
 
+- [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk/docs/tutorials-and-guides)
+- [GOV.UK Design System](https://design-system.service.gov.uk/)
+- [GOV.UK Service Manual - Accessibility & Assisted Digital](https://www.gov.uk/service-manual/helping-people-to-use-your-service)
 - [WCAG what it does and why](https://abilitynet.org.uk/news-blogs/what-wcag-and-why-does-it-matter-day)
 - [All things accessibility](https://www.digitala11y.com/web-accessibility-resources/)
 - [Some Accessibility Best Practices](https://docs.pantheon.io/guides/accessibility/best-practices)
 - [Why website non-javascript friendly?](https://endtimes.dev/why-your-website-should-work-without-javascript)
 - [Short video (2minutes) explaining GOV.UK design system and purpose](https://www.youtube.com/watch?v=MMfqMSPKGj4)
 - [Video (33minutes) of how to setup and build a basic prototype using GOV.UK Prototype Kit](https://www.youtube.com/watch?v=_7sNrp5KIKg)
+- [Nunjucks documentation](https://mozilla.github.io/nunjucks/)
+- [Full list of HTML standard autofill field names](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill)
